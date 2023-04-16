@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: orangered;
+            color: black;
+        }
+    </style>
+    <title> Django </title>
+</head>
+<body>
+    <h5>Student1: {{student1}}</h5>
+    <h5>Student1 Name: {{student1.Name}}</h5>
+    <h5>Student1 Dept: {{student1.Dept}}</h5>
+    <h5>Student1 Inst: {{student1.Institute}}</h5>
+    <h4>..........................................</h4>
+
+    <h5>Student2: {{student2}}</h5>
+    <h5>Student2 Name: {{student2.Name}}</h5>
+    <h5>Student3 Dept: {{student2.Dept}}</h5>
+    <h5>Student4 Inst: {{student2.Institute}}</h5>
+    <h4>..........................................</h4>
+
+    <h5>Student3: {{student3}}</h5>
+    <h5>Student3 Name: {{student3.Name}}</h5>
+    <h5>Student3 Dept: {{student3.Dept}}</h5>
+    <h5>Student3 Inst: {{student3.Institute}}</h5>
+    <h4>..........................................</h4>
+
+    Access key value from dict using for loop, for student1<br>
+    {% for key, value in student1.items %}
+        {{key}}: {{value}}<br>
+    {% endfor %}
+
+    Access key value from dict using for loop, for student2<br>
+    {% for key, value in student2.items %}
+        {{key}}: {{value}}<br>
+    {% endfor %}
+
+    Access key value from dict using for loop, for student3<br>
+    {% for key, value in student3.items %}
+        {{key}}: {{value}}<br>
+    {% endfor %}
+
+    <h4>..........................................</h4>
+    Access key value from dict using nested for loop<br>
+    {% for key, value in students_info.items %}
+        {{key}}: {{value}}<br>
+        {% for k, v in value.items %}
+            {{key}}: {{value}}<br>
+        {% endfor %}
+    {% endfor %}
+</body>
+</html>

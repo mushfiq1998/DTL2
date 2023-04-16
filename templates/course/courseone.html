@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: aqua;
+            color: red;
+        }
+    </style>
+    <title> Django </title>
+</head>
+<body>
+For learn_django
+<h3>Course Name: {{Course_name}}</h3>
+<h3>Course Name upper: {{Course_name | upper}}</h3>
+<h3>Duration lower: {{Duration | lower}}</h3>
+<h3>Fees capfirst: {{Fees | capfirst}}</h3>
+<h3>Seats length: {{Seats | length}}</h3>
+<h3>Course Name truncatechars: {{Course_name|truncatechars:4}}</h3>
+<h3>Course Name slice: {{ Course_name|truncatewords:2 }}</h3>
+<h3>Course Name slice: {{Course_name|slice:'2'}}</h3>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: aqua;
+            color: red;
+        }
+    </style>
+    <title> Django </title>
+</head>
+<body>
+
+Note: floatformat when used without an argument, <br>
+rounds a floating point number to one decimal place. 
+<h4>n1|floatformat: {{n1|floatformat}}</h4>
+<h4>n2|floatformat: {{n2|floatformat}}</h4>
+<h4>n3|floatformat: {{n3|floatformat}}</h4>
+
+Note: If used with a numeric integer argument, <br>
+floatformat rounds a number to that many decimal places. 
+<h4>n1|floatformat:3: {{n1|floatformat:3}}</h4>
+<h4>n2|floatformat:3: {{n2|floatformat:3}}</h4>
+<h4>n3|floatformat:3: {{n3|floatformat:3}}</h4>
+
+Note: floatformat is particularly useful is passing 0 as the argumment,<br>
+which will round the float to the nearest integer. 
+<h4>n1|floatformat:'0': {{n1|floatformat:'0'}}</h4>
+<h4>n2|floatformat:'0': {{n2|floatformat:'0'}}</h4>
+<h4>n3|floatformat:'0': {{n3|floatformat:'0'}}</h4>
+
+Note:If the the argumment passed to floatformat is negative, it will round a number <br>
+to that many decimal places. but only if there is a decimal part to be displayed
+<h4>n1|floatformat:'-3': {{n1|floatformat:'-3'}}</h4>
+<h4>n2|floatformat:'-3': {{n2|floatformat:'-3'}}</h4>
+<h4>n3|floatformat:'-3': {{n3|floatformat:'-3'}}</h4>
+
+</body>
+</html>

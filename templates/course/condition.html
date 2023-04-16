@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: black;
+            color: red;
+        }
+    </style>
+    <title> Django </title>
+</head>
+<body>
+    Personal Information:<br>
+    Name: {{Name}}<br> 
+    Institute:  {{Institute}} <br>
+    Subject: {{Subject}} <br>
+    CGPA: {{CGPA}} <br>
+    Hobby: {{Hobby}} <br>
+    Designation: {{Designation}}<br>
+    Award: {{Award}}<br>  
+    <h4>.............................</h4>
+
+    <h4> If condition </h4>
+    {% if Name %}
+        Hello {{Name}}
+    {% endif %}
+
+    {% if Institute and Name %}
+       {{Name}} is the former student of {{Institute}}.<br>
+       {{Institute}} is an institute a education & moral excellence
+    {% endif %}
+
+    {% if Subject or Designation %}
+        {{Subject}} is the short form Computer Science & Engineering.<br>
+        Mushfiq's designation is: {{Designation}} <br>
+    {% endif %}
+
+    {% if not Award %}
+        No award is achieved.<br>
+    {% endif %}
+
+    {% if CGPA == 3.80 %}
+        Hi {{Name}}! congratulation for excelent result.<br>
+    {% else %}
+        Bad result
+    {% endif %}
+
+    <h4>.............................</h4>
+    Condition with filter: <br>
+    {% if Hobby|length >= 10 %}
+        Every programmer should have his hobby {{Hobby}}.<br>
+    {% else %}
+        Length is less than 10. <br>
+    {% endif %}
+
+    <h4>.............................</h4>
+    For loop: <br>
+    {% if Hobby|length >= 10 %}
+        Every programmer should have his hobby {{Hobby}}.<br>
+    {% else %}
+        Length is less than 10. <br>
+    {% endif %}
+
+</body>
+</html>

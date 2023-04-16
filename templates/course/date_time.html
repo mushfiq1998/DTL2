@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: aqua;
+            color: red;
+        }
+    </style>
+    <title> Django </title>
+</head>
+<body>
+
+<h3>For learn date time</h3>
+<h4>Current date time: {{cdt}}</h4>
+
+Day:
+Note: d day of the month, 2 digits with leading zero, Ex: 01-31
+<h4>cdt|date:'D d M Y': {{cdt|date:'D d M Y'}}</h4>
+
+Note: j day of the month, without leading zero, Ex: 1-31
+<h4>cdt|date:'D j M Y': {{cdt|date:'D j M Y'}}</h4>
+
+Note: D day of the week, textual, 3 letters. Ex: Fri
+<h4>cdt|date:'D D M Y': {{cdt|date:'D D M Y'}}</h4>
+
+Note: l day of the week, textual long. Ex: Friday
+<h4>cdt|date:'D l M Y': {{cdt|date:'D l M Y'}}</h4>
+
+Note: S Englinh ordinal suffix for day of the month, 2 characters. Ex: st, nd, rd or th.
+<h4>cdt|date:'D S M Y': {{cdt|date:'D S M Y'}}</h4>
+
+Note: w day of the week, digits without leading zeros. Ex: 0 (sunday) to 6 (saturday)
+<h4>cdt|date:'D w M Y': {{cdt|date:'D w M Y'}}</h4>
+
+Note: z day of the year, Ex: 1 t0 366
+<h4>cdt|date:'D z M Y': {{cdt|date:'D z M Y'}}</h4>
+
+Note: W ISO-8601, Week number of year, with weeks starting on monday. Ex: 1, 53
+<h4>cdt|date:'D W M Y': {{cdt|date:'D W M Y'}}</h4>
+
+<h3> .................................................</h3>
+
+Month:
+Note: m month, 2 digits with leading zeros. Ex: 01 to 12
+<h4>cdt|date:'D d m Y': {{cdt|date:'D d m Y'}}</h4>
+
+Note: n month, without leading zeros. Ex: 1 to 2
+<h4>cdt|date:'D d n Y': {{cdt|date:'D d n Y'}}</h4>
+
+Note: M month, textual, 3 letters. Ex: Jan
+<h4>cdt|date:'D d M Y': {{cdt|date:'D d M Y'}}</h4>
+
+Note: b month, textual, 3 letters, lowercase. Ex: Jan
+<h4>cdt|date:'D d b Y': {{cdt|date:'D d b Y'}}</h4>
+
+<u>Not clear to me</u>
+<h4>cdt|date:'D d e Y': {{cdt|date:'D d e Y'}}</h4>
+
+Note: F month, textual long. Ex: January
+<h4>cdt|date:'D d F Y': {{cdt|date:'D d F Y'}}</h4>
+
+Note: N month abbreviation in associated press style. proprietary extension. Ex: Jan.
+<h4>cdt|date:'D d N Y': {{cdt|date:'D d N Y'}}</h4>
+
+Note: t number of days in the given month. Ex: April = 30 day
+<h4>cdt|date:'D d t Y': {{cdt|date:'D d t Y'}}</h4>
+
+<h3>.................................................</h3>
+Year:
+Note: y year, 2 digits. Ex: 99
+<h4>cdt|date:'D d m y': {{cdt|date:'D d m y'}}</h4>
+
+Note: y year, 4 digits. Ex: 1999
+<h4>cdt|date:'D d m Y': {{cdt|date:'D d m Y'}}</h4>
+
+Note: Boolean for whether it is leap year. True or False.
+<h4>cdt|date:'D d m L': {{cdt|date:'D d m L'}}</h4>
+
+Note: Not clear to me. Ex: 1999
+<h4>cdt|date:'D d m o': {{cdt|date:'D d m o'}}</h4>
+
+<h3>.................................................</h3>
+Time: Hour:<br>
+Note: g 12 hour format without leading zero. Ex: 1 to 12
+<h4>cdt|time:'g:i': {{cdt|time:'g:i'}}</h4>
+
+Note: G 24 hour format without leading zero. Ex: 0 to 24
+<h4>cdt|time:'G:i': {{cdt|time:'G:i'}}</h4>
+
+Note: h 12 hour format. Ex: 01 to 12
+<h4>cdt|time:'h:i': {{cdt|time:'h:i'}}</h4>
+
+Note: H 24 hour format. Ex: 00 to 23
+<h4>cdt|time:'H:i': {{cdt|time:'H:i'}}</h4>
+
+<h3>.................................................</h3>
+Time: Minute, Second, microSecond:<br>
+Note: s second 2 digits with leading zeros. Ex:00 to 59
+<h4>cdt|time:'g:i:s': {{cdt|time:'g:i:s'}}</h4>
+
+Note: u microseconds. Ex: 000000 to 999999
+<h4>cdt|time:'g:i:s:u': {{cdt|time:'g:i:s:u'}}</h4>
+
+Note: a a.m. or p.m.
+<h4>cdt|time:'g:i:s:a': {{cdt|time:'g:i:s:a'}}</h4>
+<h4>cdt|time:'g:i:s:u:a': {{cdt|time:'g:i:s:u:a'}}</h4>
+
+Note: A AM or PM
+<h4>cdt|time:'g:i:s:A': {{cdt|time:'g:i:s:A'}}</h4>
+
+Note: f hour and min
+<h4>cdt|time:'f': {{cdt|time:'f'}}</h4>
+Note: f hour, min, sec, ms, am
+<h4>cdt|time:'f:s:u:a': {{cdt|time:'f:s:u:a'}}</h4>
+Note: f hour, min, sec, ms, AM
+<h4>cdt|time:'f:s:u:a': {{cdt|time:'f:s:u:A'}}</h4>
+
+Note: Not clear to me
+<h4>cdt|time:'a': {{cdt|time:'p:a'}}</h4>
+
+<h3>.................................................</h3>
+Timezone:<br>
+
+<h3>.................................................</h3>
+Date/Time:<br>
+
+<h3>.................................................</h3>
+Predefined format:<br>
+Note: default 'N j, Y' April 10, 2023
+<h4>cdt|date:'DATE_FORMAT': {{cdt|date:'DATE_FORMAT'}}</h4>
+
+Note: Default 'N j, Y, P' April 10, 2023, 1:13 p.m.
+<h4>cdt|date:'DATETIME_FORMAT': {{cdt|date:'DATETIME_FORMAT'}}</h4>
+
+Note: Default 'm/d/Y' 04/10/2023
+<h4>cdt|date:'SHORT_DATE_FORMAT': {{cdt|date:'SHORT_DATE_FORMAT'}}</h4>
+
+Note: Default 'm/d/Y P' 04/10/2023 3:23 p.m.
+<h4>cdt|date:'SHORT_DATETIME_FORMAT': {{cdt|date:'SHORT_DATETIME_FORMAT'}}</h4>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: orangered;
+            color: black;
+        }
+    </style>
+    <title> Django </title>
+</head>
+<body>
+    stuinfo: {{stuinfo}}
+    <h5>.............................</h5>
+    keys of dict:
+    {% for key, value in stuinfo.items %}
+        {{key}}
+    {% endfor %}<br>
+    values of dict:
+    {% for key, value in stuinfo.items %}
+        {{key}}
+    {% endfor %}<br>
+    keys and values of dict:<br>
+    {% for key, value in stuinfo.items %}
+        {{key}}: {{value}}<br>
+    {% endfor %}
+
+    <h5>.............................</h5>
+    Access key value from dict using nested for loop<br>
+    {% for key, value in stuinfo.items %}
+        {{key}}: <br>
+        {% for k, v in value.items %}
+            {{k}}: {{v}}<br>
+        {% endfor %}
+    {% endfor %}
+
+    <h5>.............................</h5>
+    Access key value from dict using nested for loop
+    using forloop.parentloop.counter<br>
+    {% for key, value in stuinfo.items %}
+        {{key}}: <br>
+        {% for k, v in value.items %}
+            <!-- Return the iteration number of parent loop!-->
+            {{forloop.parentloop.counter}}: {{k}}: {{v}}<br>
+        {% endfor %}
+    {% endfor %}
+
+    <h5>.............................</h5>
+    Access key value from dict using nested for loop 
+    using forloop.parentloop.counter0<br>
+    {% for key, value in stuinfo.items %}
+        {{key}}: <br>
+        {% for k, v in value.items %}
+            <!-- Return the iteration number of parent loop, 
+                starting from 0!-->
+            {{forloop.parentloop.counter0}}: {{k}}: {{v}}<br>
+        {% endfor %}
+    {% endfor %}
+</body>
+</html>

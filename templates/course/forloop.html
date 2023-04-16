@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: orangered;
+            color: black;
+        }
+    </style>
+    <title> Django </title>
+</head>
+<body>
+    For loop: <br>
+    Students: {{Names}}<br>
+    {% for name in Names %}
+        {{name}}<br>
+    {% endfor %}
+
+    <h4> ..................... </h4>
+    Students in order: {{Names}}<br>
+    Name of students in reverse order:<br>
+    {% for name in Names reversed %}
+        {{name}}<br>
+    {% endfor %}
+
+    <h4> ..................... </h4>
+    Name of students in unorder list:<br>
+    {% for name in Names reversed %}
+       <li>{{name}}</li>
+    {% endfor %}
+
+    <h4> ..................... </h4>
+    Name of students in unorder list:<br>
+    {% for name in Names reversed %}
+       <li>{{name}}</li>
+    {% empty %}
+        <h4> Empty block is executed.
+    {% endfor %}
+
+    <h4> ..................... </h4>
+    Students: {{Names}}<br>
+    For loop counter: <br>
+    {% for name in Names %}
+       {{forloop.counter}}: {{name}}<br>
+    {% endfor %}
+
+    <h4> ..................... </h4>
+    Students: {{Names}}<br>
+    For loop counter0: <br>
+    {% for name in Names %}
+       {{forloop.counter0}}: {{name}}<br>
+    {% endfor %}
+
+    <h4> ..................... </h4>
+    Students: {{Names}}<br>
+    For loop first: <br>
+    {% for name in Names %}
+       {{forloop.first}}: {{name}}<br>
+    {% endfor %}
+
+    <h4> ..................... </h4>
+    Students: {{Names}}<br>
+    For loop last: <br>
+    {% for name in Names %}
+       {{forloop.last}}: {{name}}<br>
+    {% endfor %}
+
+    <h4> ..................... </h4>
+    Students: {{Names}}<br>
+    For loop revcounter: <br>
+    {% for name in Names %}
+       {{forloop.revcounter}}: {{name}}<br>
+    {% endfor %}
+
+    <h4> ..................... </h4>
+    Students: {{Names}}<br>
+    For loop revcounter0: <br>
+    {% for name in Names %}
+       {{forloop.revcounter0}}: {{name}}<br>
+    {% endfor %}
+</body>
+</html>
